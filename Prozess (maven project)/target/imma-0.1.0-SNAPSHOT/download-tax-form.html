@@ -1,0 +1,69 @@
+<form class="form-horizontal"
+      role="form">
+
+<div class="form-group">
+    <label class="control-label">Hochgeladenes Dokument</label>
+    <div class="form-control-static">
+      <a cam-file-download="uStudiengebuehr"></a>
+    </div>	
+</div>	
+<br>	
+	  
+<div class="form-group col-md-8">
+	<table>
+	<tr>
+		<th>Erwarteter Betrag</th>
+		<th>Gezahlter Betrag</th>
+		<th>offener Betrag</th>
+		<th></th>
+	</tr>
+	<tr>
+		<td>   
+		<input readonly 
+			class="form-control"
+           cam-variable-type="Double"
+           cam-variable-name="semestergebuehr"
+            ng-change="calculateRest()"
+			name="semestergebuehr"
+			type="number"/>
+		</td>
+		<td>
+			<input required 
+				class="form-control" 
+				cam-variable-type="Double"
+				cam-variable-name="nachweisbetrag"
+				ng-change="calculateRest()"
+				name="nachweisbetrag"
+				type="number"/>
+		</td>
+		<td>   
+			{{semestergebuehr - nachweisbetrag}}
+		</td>
+		<td>
+			<div class="checkbox">
+			<label>
+			<input cam-variable-name="approvedDocumentBetrag"
+                 cam-variable-type="Boolean"
+                 type="checkbox"
+                 name="approvedDocumentBetrag"
+                 class="form-control" />
+			Zahlung korrekt?
+			</label>
+			</div>
+			</div>
+		</td>
+	</tr>
+	
+	
+	<script cam-script type="text/form-script">
+      $scope.calculateRest = function() {
+        var form = $scope.variablesForm;
+		var nachweisbetrag = form.nachweisbetrag.$modelValue;
+        var semestergebuehr = form.semestergebuehr.$modelValue;
+	}
+    </script>
+
+</table>
+</div>
+</form>
+

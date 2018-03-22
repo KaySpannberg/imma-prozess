@@ -1,0 +1,100 @@
+<form class="form-horizontal"
+      role="form">
+  
+  <div class="form-group">
+  
+	<table>
+	<tr>
+		<th>Hochgeladene Dokumente</th>
+		<th></th>
+		<th></th>
+	</tr>
+	<tr>
+		<td>Personalausweis</td>
+		<td><div class="form-control-static col-md-10"><a cam-file-download="uPersonalausweis"></a></div></td>
+		<td><div class="col-md-10 col-md-offset-2"><div class="checkbox">
+        <label>
+          <input cam-variable-name="approvedDocumentPerso"
+                 cam-variable-type="Boolean"
+                 type="checkbox"
+                 name="approvedDocumentPerso"
+                 class="form-control" />
+          Dokument korrekt?
+        </label>
+      </div>
+    </div></td>
+	</tr>
+	<tr>
+		<td>Krankenkassenbescheinigung</td>
+		<td><div class="form-control-static col-md-10"><a cam-file-download="uKrankenkassenbescheinigung"></a></div></td>
+		<td><div class="col-md-10 col-md-offset-2"><div class="checkbox">
+        <label>
+          <input cam-variable-name="approvedDocumentKrank"
+                 cam-variable-type="Boolean"
+                 type="checkbox"
+                 name="approvedDocumentKrank"
+                 class="form-control" />
+          Dokument korrekt?
+        </label>
+      </div>
+    </div></td>
+	</tr>
+	<tr>
+		<td>Schulzeugnis</td>
+		<td><div class="form-control-static col-md-10"><a cam-file-download="uSchulzeugnis"></a></div></td>
+		<td><div class="col-md-10 col-md-offset-2"><div class="checkbox">
+        <label>
+          <input cam-variable-name="approvedDocumentZeugnis"
+                 cam-variable-type="Boolean"
+                 type="checkbox"
+                 name="approvedDocumentZeugnis"
+                 class="form-control" />
+          Dokument korrekt?
+        </label>
+      </div>
+    </div></td>
+	</tr>
+	<tr>
+		<td>Hochschulzugangsberechtigung</td>
+		<td><div class="form-control-static col-md-10"><a cam-file-download="uHochschulzugangsberechtigung"></a></div></td>
+		<td><div class="col-md-10 col-md-offset-2"><div class="checkbox">
+        <label>
+          <input cam-variable-name="approvedDocumentZugang"
+                 cam-variable-type="Boolean"
+                 type="checkbox"
+                 name="approvedDocumentZugang"
+                 class="form-control" />
+          Dokument korrekt?
+        </label>
+      </div>
+    </div></td>
+	</tr>
+	<tr>
+		<td>Passbild</td>
+		<td><div class="form-control-static col-md-10"><a cam-file-download="uPassbild"></a></div></td>
+		<td><div class="col-md-10 col-md-offset-2"><div class="checkbox">
+        <label>
+          <input cam-variable-name="approvedDocumentPass"
+                 cam-variable-type="Boolean"
+                 type="checkbox"
+                 name="approvedDocumentPass"
+                 class="form-control" />
+          Dokument korrekt?
+        </label>
+      </div>
+    </div></td>
+	</tr>
+
+</table>
+
+</div>
+ 
+ <input type="hidden"
+       cam-variable-name="approvedDocumentSprachzeugnis"
+       cam-variable-type="Boolean"
+       value=false />
+<input type="hidden"
+       cam-variable-name="approvedDocumentLeistung"
+       cam-variable-type="Boolean"
+       value=false />
+</form>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="definitions_0o0naxg" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="immaArt" name="Dokumente bestimmen">
+    <extensionElements>
+      <biodi:bounds x="200" y="200" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable">
+      <input id="input1" label="Immatrikulationsart" camunda:inputVariable="">
+        <inputExpression id="inputExpression1" typeRef="string">
+          <text>imma_Art</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_054nch1">
+          <text><![CDATA["Wechsel","Neu","Ausland"]]></text>
+        </inputValues>
+      </input>
+      <input id="InputClause_0ren7t2" label="Studienart" camunda:inputVariable="">
+        <inputExpression id="LiteralExpression_1inc6qf" typeRef="string">
+          <text>stud_Art</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_0dy5sfb">
+          <text><![CDATA["Bachelor","Master"]]></text>
+        </inputValues>
+      </input>
+      <output id="zeugnis" label="Zeugnis" name="zeugnis" typeRef="boolean" />
+      <output id="personalausweis" label="Personalausweis" name="personalausweis" typeRef="boolean" />
+      <output id="studienberechtigung" label="Studienberechtigung" name="studienberechtigung" typeRef="boolean" />
+      <output id="passbild" label="Passbild" name="passbild" typeRef="boolean" />
+      <output id="krankenversicherung" label="Krankenversicherung" name="krankenversicherung" typeRef="boolean" />
+      <output id="leistungserkennungsantrag" label="Leistungserkennungsantrag" name="leistungserkennungsantrag" typeRef="boolean" />
+      <output id="sprachzeugnis" label="Sprachzeugnis" name="sprachzeugnis" typeRef="boolean" />
+      <output id="OutputClause_0b19aal" label="Nachweis Bachelor" name="nachweis_b" typeRef="boolean" />
+      <output id="OutputClause_0i4nijr" label="Form Upload" name="formUpload" typeRef="string">
+        <outputValues id="UnaryTests_1qkfc3h">
+          <text><![CDATA["embedded:app:upload-document-form_IM.html","embedded:app:upload-document-form_IB.html","embedded:app:upload-document-form_SB.html","embedded:app:upload-document-form_SM.html","embedded:app:upload-document-form_AM.html","embedded:app:upload-document-form_AB.html"]]></text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_18dnerb" label="Form Download" name="formDownload" typeRef="string">
+        <outputValues id="UnaryTests_15t7a5i">
+          <text><![CDATA["embedded:app:download-document-form_AB.html","embedded:app:download-document-form_AM.html","embedded:app:download-document-form_IB.html","embedded:app:download-document-form_IM.html","embedded:app:download-document-form_SB.html","embedded:app:download-document-form_SM.html"]]></text>
+        </outputValues>
+      </output>
+      <rule id="row-237297571-2">
+        <inputEntry id="UnaryTests_19anpuz">
+          <text><![CDATA["Wechsel"]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m559xd">
+          <text><![CDATA["Bachelor"]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08yqlcr">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yaoof6">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sf7bb3">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_043nypk">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yzin8r">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01adrsz">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hfv8y3">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0odxc5e">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0owomef">
+          <text><![CDATA["upload-document-form_SB.html"]]></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sbj6v7">
+          <text><![CDATA["download-document-form_SB.html"]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-309495870-1">
+        <inputEntry id="UnaryTests_08r722y">
+          <text><![CDATA["Neu"]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xcblz7">
+          <text><![CDATA["Bachelor"]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pf4yn4">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00w45rx">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09dk1xs">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ovnvct">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gsowl8">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1c1w4e5">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f50r0l">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qjrc73">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x5vs6i">
+          <text><![CDATA["upload-document-form_IB.html"]]></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_171okq3">
+          <text><![CDATA["download-document-form_IB.html"]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-309495870-2">
+        <inputEntry id="UnaryTests_1iiz7to">
+          <text><![CDATA["Ausland"]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_057xdx5">
+          <text><![CDATA["Bachelor"]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1e516p8">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08tw68w">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bves2l">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_067z5t3">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10nwvwc">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01j0jkg">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_065e2uk">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11dry5s">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qv7ipd">
+          <text><![CDATA["upload-document-form_AB.html"]]></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11shyz6">
+          <text><![CDATA["download-document-form_AB.html"]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-401032853-1">
+        <inputEntry id="UnaryTests_04e5c4a">
+          <text><![CDATA["Wechsel"]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_135pkms">
+          <text><![CDATA["Master"]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02bd74y">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06z4bcd">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03ipccx">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0im3m2u">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0olvgez">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s1nhzf">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02dg3fl">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b25yn6">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mjj1nl">
+          <text><![CDATA["upload-document-form_SM.html"]]></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ncvica">
+          <text><![CDATA["download-document-form_SM.html"]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-401032853-2">
+        <inputEntry id="UnaryTests_0pdotpp">
+          <text><![CDATA["Neu"]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_104q3jv">
+          <text><![CDATA["Master"]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17m92ru">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1u6owfc">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11lfutk">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p783j1">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hgdlfy">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1notqod">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06ootwm">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12ps52k">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f6w8b7">
+          <text><![CDATA["upload-document-form_IM.html"]]></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10me6hx">
+          <text><![CDATA["download-document-form_IM.html"]]></text>
+        </outputEntry>
+      </rule>
+      <rule id="row-401032853-3">
+        <inputEntry id="UnaryTests_18vttk8">
+          <text><![CDATA["Ausland"]]></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jxjxpv">
+          <text><![CDATA["Master"]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kmkmti">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14ub4lf">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fzvr05">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jkc1mk">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04a37zn">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y3d9iu">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zz9bzn">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1buc3ej">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ph2sc0">
+          <text><![CDATA["upload-document-form_AM.html"]]></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1swb7x6">
+          <text><![CDATA["download-document-form_AM.html"]]></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

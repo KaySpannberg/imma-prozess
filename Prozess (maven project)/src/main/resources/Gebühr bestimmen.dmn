@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="definitions_1m1guas" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="gebuehr" name="Gebühr bestimmen">
+    <decisionTable id="decisionTable">
+      <input id="input1" label="Studienfach" camunda:inputVariable="">
+        <inputExpression id="inputExpression1" typeRef="string">
+          <text>studienfach</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1k6lxn3">
+          <text><![CDATA["Photonics","SecMan","OnlineMedieninformatik"]]></text>
+        </inputValues>
+      </input>
+      <output id="output1" label="Semestergebuehr" name="semestergebuehr" typeRef="double" />
+      <rule id="row-975437191-1">
+        <inputEntry id="UnaryTests_0h6wofv">
+          <text><![CDATA["Photonics", "SecMan"]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ry2vs6">
+          <text>475.10</text>
+        </outputEntry>
+      </rule>
+      <rule id="row-975437191-2">
+        <inputEntry id="UnaryTests_135sw1m">
+          <text><![CDATA["OnlineMedieninformatik"]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oq3t30">
+          <text>111.00</text>
+        </outputEntry>
+      </rule>
+      <rule id="row-975437191-4">
+        <inputEntry id="UnaryTests_1wnrgf2">
+          <text><![CDATA[not("Photonics", "OnlineMedieninformatik", "SecMan")]]></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mwjlco">
+          <text>225.10</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

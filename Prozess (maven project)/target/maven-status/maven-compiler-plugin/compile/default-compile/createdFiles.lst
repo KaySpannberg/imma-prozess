@@ -1,0 +1,3 @@
+org\camunda\bpm\getstarted\service\ParseDecisionListener.class
+org\camunda\bpm\getstarted\service\ImmaApplication.class
+org\camunda\bpm\getstarted\service\StudienbescheinigungLocal.class
