@@ -5,5 +5,17 @@ Beispielprozess zur elektronischen Immatrikulation mit Hilfe der BPMN-Process-En
 
 ## Lokale Installation / Konfiguration
 * Test
-. sssss
-. ss
+1. sssss
+1. ss
+
+1. sssss
+2. ss
+
+fasfasf
+
+1. sssss
+2. ss
+1. sssss
+2. ss
+3. sssss
+4. ss
