@@ -21,4 +21,14 @@ Damit sie den "Prozess 1.0" auf ihrem System ausführen können, müssen Sie die
 
 Text in Arbeit
 
+## Konfiguration des Prozesses
 
+Text in Arbeit
+
+1. E-Mail
+2. Ereignisse
+3. etc.
+
+## Rest-API ansteuern
+
+Text in Arbeit
