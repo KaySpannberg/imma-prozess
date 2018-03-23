@@ -7,7 +7,7 @@ Beispielprozess zur elektronischen Immatrikulation mit Hilfe der BPMN-Process-En
 
 Damit Sie den dargestellen "Prozess 1.0" auf ihrem System ausführen können, müssen Sie die folgenden Schritte umsetzen:
 
-1. Laden Sie sich einen [Camunda Tomcat Server](https://camunda.com/download/) (7.6+) auf ihr System und entpacken Sie diesen. Zusätzlich benötigen sie eine aktuellen Version des [Java SE Development Kit's](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+1. Laden Sie sich einen [Camunda Tomcat Server](https://camunda.com/download/) (7.6+) auf ihr System und entpacken Sie diesen. Zusätzlich benötigen sie eine aktuellen Version des [Java SE Development Kit's](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (JDK).
 	* Hinweis für Windows-Systeme: Damit der entpackte Tomcat Server starten kann, müssen Sie zwei [Umgebungsvariablen](http://techmixx.de/windows-10-umgebungsvariablen-bearbeiten/) zum installierten JDK definieren. Der Name der ersten Variable sollte "JAVA_HOME" und der Pfad sollte auf Ihren lokalen Speicherort verweisen, z.B. "C:\Programm Files\Java\jdk1.8.0_91".. Der Name der zweiten Variable sollte "JRE_Home" und der Pfad sollte auf Ihren lokalen Speicherort verweisen, z.B. "C:\Programm Files\Java\jre1.8.0_151".
 2. Kopieren Sie aus dem Ordner "Mail Connector" die Datei "camunda-bpm-mail-core-1.3.0-SNAPSHOT.jar" in das untergeordnete lib-Verzeichnis des Tomcat (Verzeichnis: [Camunda Tomcat]\server\apache-tomcat-8.0.24\lib).
 3. Danach kopieren Sie aus dem gleichen Ordner "Mail Connector" die Datei "mail-config.properties" in das untergeordnete conf-Verzeichnis des Tomcat (Verzeichnis: [Camunda Tomcat]\server\apache-tomcat-8.0.24\conf). Diese Datei ist für den Zugriff auf ein Mail-Konto notwendig.
