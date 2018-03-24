@@ -18,7 +18,7 @@ Damit Sie den dargestellen "Prozess 1.0" auf ihrem System ausführen können, m�
 	* Hinweis: Achten Sie darauf, über welche URL der Webserver angesprochen wird. Sollt diese nicht "http://127.0.0.1/" lauten, muss die URL des Webservers oder die E-Mail-Beschreibung der Sende-Aufgaben und -Ereignisse im Prozess angepasst werden.
 5. Kopieren aus dem Ordner "Prozess (.war)" die Datei "imma-0.1.0-SNAPSHOT.war" in das untergeordnete Verzeichnis "webapps" (Verzeichnis: [Camudna Tomcat]\server\apache-tomcat-8.0.24\webapps).
 
-## Prozess bearbeiten
+## Prozess bearbeiten (Maven Java-Projekt)
 
 Text in Arbeit
 
@@ -42,11 +42,11 @@ curl_setopt($csendfile, CURLOPT_HTTPHEADER, array(
 			'Content-Type: application/json')
 );  
 ```
-Im Prozess werden jedoch nicht alle Nachriten-Ereignisse über die Webseiten-Formulare angesteuert. Um diese auszulösen, können REST-Client’s eingesetzt werden (z.B. [Advanced REST Client](https://install.advancedrestclient.com/#/install) ). Diese dienen zur Simulation und Testung eines REST-Aufrufs.
+Im Prozess werden jedoch nicht alle Nachriten-Ereignisse über die Webseiten-Formulare angesteuert. Um diese auszulösen können REST-Client’s eingesetzt werden (z.B. [Advanced REST Client](https://install.advancedrestclient.com/#/install) ). Diese dienen zur Simulation und Testung eines REST-Aufrufs.
 
 ![Sample RestClient](Abbildungen/RestClient.PNG)
 
-Wichtig hierbei ist, dass die „Request URL“ und der „Body“ des JSON-Strings richtig geschrieben sind. Die URL sollte für lokale Anwendungen immer folgendermaßen beginnen „http://localhost:8080/engine-rest/“ alle nachfolgenden Informationen sind REST-Aufruf spezifisch. Die Einstellungen für den Body müssen Sie der [Camunda Dokumentation](https://docs.camunda.org/manual/latest/reference/rest/) entnehmen (Beispiel für ein [empfangendes Nachrichten-Ereignis](https://docs.camunda.org/manual/latest/reference/rest/message/post-message/) ).
+Wichtig hierbei ist, dass die „Request URL“ und der „Body“ des JSON-Strings richtig geschrieben sind. Die URL sollte für lokale Anwendungen immer folgendermaßen beginnen „http://localhost:8080/engine-rest/“ alle nachfolgenden Informationen sind REST-Aufruf spezifisch. Die Einstellungen für den Body müssen Sie der [Camunda Dokumentation](https://docs.camunda.org/manual/latest/reference/rest/) entnehmen.
 
 * Hinweis: Die Request URL für ein [empfangendes Nachrichten-Ereignis](https://docs.camunda.org/manual/7.8/reference/rest/message/post-message/) setzt sich folgender Maßen zusammen: "http://localhost:8080/engine-rest/" + "message"
 * Hinweis: Die Request URL zum beenden einer [Benutzer-Aufgabe](https://docs.camunda.org/manual/7.8/reference/rest/task/post-submit-form/) lautet: "http://localhost:8080/engine-rest/" + "task/{id}/submit-form"
