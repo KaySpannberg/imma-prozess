@@ -34,7 +34,7 @@ Text in Arbeit
 
 Um die Benutzer-Aufgaben oder Nachrichten-Ereignisse von außerhalb auslösen zu können, müssen Sie auf die [REST API](https://docs.camunda.org/manual/latest/reference/rest/) von Camunda zugreifen. Die REST API wird im „Prozess 1.0“ über die „externen Webseiten Formulare“ via cURL (PHP) angesteuert. 
 ```php
-$csendfile = curl_init('http://localhost:8080/engine-rest/task/'.$taskid.'/submit-form');                                                                      
+$csendfile = curl_init('http://localhost:8080/engine-rest/task/'.$taskid.'/submit-form');
 curl_setopt($csendfile, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($csendfile, CURLOPT_POSTFIELDS, $data);
 curl_setopt($csendfile, CURLOPT_RETURNTRANSFER, true);
