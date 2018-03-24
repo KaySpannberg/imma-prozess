@@ -48,8 +48,8 @@ Im Prozess werden jedoch nicht alle Nachriten-Ereignisse über die Webseiten-For
 
 Wichtig hierbei ist, dass die „Request URL“ und der „Body“ des JSON-Strings richtig geschrieben sind. Die URL sollte für lokale Anwendungen immer folgendermaßen beginnen „http://localhost:8080/engine-rest/“ alle nachfolgenden Informationen sind REST-Aufruf spezifisch. Die Einstellungen für den Body müssen Sie der [Camunda Dokumentation](https://docs.camunda.org/manual/latest/reference/rest/) entnehmen.
 
-* Hinweis: Die Request URL für ein [empfangendes Nachrichten-Ereignis](https://docs.camunda.org/manual/7.8/reference/rest/message/post-message/) setzt sich folgender Maßen zusammen: "http://localhost:8080/engine-rest/" + "message"
-* Hinweis: Die Request URL zum beenden einer [Benutzer-Aufgabe](https://docs.camunda.org/manual/7.8/reference/rest/task/post-submit-form/) lautet: "http://localhost:8080/engine-rest/" + "task/{id}/submit-form"
+* Hinweis: Die Request URL für ein [empfangendes Nachrichten-Ereignis](https://docs.camunda.org/manual/7.8/reference/rest/message/post-message/) setzt sich folgender Maßen zusammen: "http://localhost:8080/engine-rest/" + "message". Dies ergibt dann: http://localhost:8080/engine-rest/message
+* Hinweis: Die Request URL zum beenden einer [Benutzer-Aufgabe](https://docs.camunda.org/manual/7.8/reference/rest/task/post-submit-form/) lautet: "http://localhost:8080/engine-rest/" + "task/{id}/submit-form" Die ergibt dann: http://localhost:8080/engine-rest/task/a901185b-f58b-11e7-81d5-00090ffe0001/submit-form
 	
 
 
