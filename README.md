@@ -44,7 +44,7 @@ curl_setopt($csendfile, CURLOPT_HTTPHEADER, array(
 ```
 Im Prozess werden jedoch nicht alle Nachriten-Ereignisse über die Webseiten-Formulare angesteuert. Um diese auszulösen, können REST-Client’s eingesetzt werden (z.B. [Advanced REST Client](https://install.advancedrestclient.com/#/install) ). Diese dienen zur Simulation eines REST-Aufrufs.
 
-![Sample RestClient](Abbildungen/RestClient.png)
+![Sample RestClient](Abbildungen/RestClient.PNG)
 
 Wichtig hierbei ist, dass die „Request URL“ und der „Body“ des JSON-Strings richtig geschrieben sind. Die URL sollte immer folgendermaßen beginnen „http://localhost:8080/engine-rest/“ alle nachfolgenden Informationen sind REST-Aufruf spezifisch. Die Einstellungen für den Body müssen Sie der [Camunda Dokumentation](https://docs.camunda.org/manual/latest/reference/rest/) entnehmen (Beispiel für ein [empfangendes Nachrichten-Ereignis](https://docs.camunda.org/manual/latest/reference/rest/message/post-message/) ).
 
