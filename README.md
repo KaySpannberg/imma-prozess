@@ -28,7 +28,7 @@ Zur Bearbeitung des „Prozess 1.0“ müssen Sie sich ein Java Entwicklertool i
 
 Text in Arbeit
 
-1. E-Mail: Diese können nur im Prozess über den Camunda Modeler bearbeitet werden. Alle Sende-Aufgaben wurden mit dem [Mail Connector](https://github.com/camunda/camunda-bpm-mail) verbunden und können im „Properties Pannel“ untern dem Reiter Connector bearbeitet werden. Alle möglichen Einstellungen, können Sie der Dokumentation des [Mail Connector‘s](https://github.com/camunda/camunda-bpm-mail) entnehmen.
+1. E-Mail: Diese können nur im Prozess über den Camunda Modeler bearbeitet werden. Alle sendenen Nachrichten-Aufgaben wurden mit dem [Mail Connector](https://github.com/camunda/camunda-bpm-mail) verbunden und können im „Properties Pannel“ untern dem Reiter Connector bearbeitet werden. Alle möglichen Einstellungen, können Sie der Dokumentation des [Mail Connector‘s](https://github.com/camunda/camunda-bpm-mail) entnehmen.
 2. DMN Tabelle:
 3. Embedded Web-Formulare:
 4. True / False Dokumente:
