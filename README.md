@@ -20,7 +20,9 @@ Damit Sie den dargestellen "Prozess 1.0" auf ihrem System ausführen können, m�
 
 ## Prozess bearbeiten (Maven Java-Projekt)
 
-Text in Arbeit
+Zur Bearbeitung des „Prozess 1.0“ müssen Sie sich ein Java Entwicklertool installieren, wie z.B. [Camunda Eclipse](https://www.eclipse.org/downloads/) oder [NetBeans](https://netbeans.org/downloads/). Nachdem Sie das Tool installiert haben, müssen Sie das Projekt aus dem Unterordner „Prozess (maven project)“ importieren bzw. laden. Achten Sie darauf, dass ist sich dabei um ein Maven Projekt handelt und dementsprechend auch als solches geöffnet wird.
+* Hinweis: Weitere Informationen dazu finden Sie in der offiziellen [Camunda Dokumentation Server]( https://docs.camunda.org/get-started/bpmn20/)
+
 
 ## Konfiguration des Prozesses
 
