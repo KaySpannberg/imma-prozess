@@ -22,15 +22,17 @@ Damit Sie den dargestellen "Prozess 1.0" auf ihrem System ausführen können, m�
 
 Zur Bearbeitung des „Prozess 1.0“ müssen Sie sich ein Java Entwicklertool installieren, wie z.B. [Camunda Eclipse](https://www.eclipse.org/downloads/) oder [NetBeans](https://netbeans.org/downloads/) installieren. Nachdem Sie dies erledigt haben, müssen Sie den Prozess aus dem Unterordner „Prozess (maven project)“ importieren bzw. laden. Achten Sie darauf, dass ist sich dabei um ein Maven Projekt handelt und dementsprechend auch als solches geöffnet wird.
 
-* Hinweis: Weitere Informationen dazu finden Sie auf der offiziellen [Camunda Dokumentation]( https://docs.camunda.org/get-started/bpmn20/)
+* Hinweis: Weitere Informationen dazu finden Sie auf der offiziellen [Camunda Dokumentation]( https://docs.camunda.org/get-started/bpmn20/).
 
 ## Konfiguration des Prozesses
 
 Text in Arbeit
 
-1. E-Mail
-2. Ereignisse
-3. etc.
+1. E-Mail: Diese können nur im Prozess über den Camunda Modeler bearbeitet werden. Alle Sende-Aufgaben wurden mit dem [Mail Connector](https://github.com/camunda/camunda-bpm-mail) verbunden und können im „Properties Pannel“ untern dem Reiter Connector bearbeitet werden. Alle möglichen Einstellungen, können Sie der Dokumentation des [Mail Connector‘s](https://github.com/camunda/camunda-bpm-mail) entnehmen.
+2. DMN Tabelle:
+3. Embedded Web-Formulare:
+4. True / False Dokumente:
+
 
 ## Rest-API ansteuern
 
