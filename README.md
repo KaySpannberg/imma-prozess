@@ -20,19 +20,18 @@ Damit Sie den dargestellen "Prozess 1.0" auf ihrem System ausführen können, m�
 
 ## Prozess bearbeiten (Maven Java-Projekt)
 
-Zur Bearbeitung des „Prozess 1.0“ müssen Sie sich ein Java Entwicklertool installieren, wie z.B. [Camunda Eclipse](https://www.eclipse.org/downloads/) oder [NetBeans](https://netbeans.org/downloads/) installieren. Nachdem Sie dies erledigt haben, müssen Sie den Prozess aus dem Unterordner „Prozess (maven project)“ importieren bzw. laden. Achten Sie darauf, dass ist sich dabei um ein Maven Projekt handelt und dementsprechend auch als solches geöffnet wird.
+Zur Bearbeitung des „Prozess 1.0“ müssen Sie sich ein Java Entwicklertool installieren, wie z.B. [Camunda Eclipse](https://www.eclipse.org/downloads/) oder [NetBeans](https://netbeans.org/downloads/). Nachdem Sie dies erledigt haben, müssen Sie den Prozess aus dem Unterordner „Prozess (maven project)“ importieren bzw. laden. Achten Sie darauf, dass ist sich dabei um ein Maven Projekt handelt und dementsprechend auch als solches geöffnet wird.
 
 * Hinweis: Weitere Informationen dazu finden Sie auf der offiziellen [Camunda Dokumentation]( https://docs.camunda.org/get-started/bpmn20/).
 
 ## Konfiguration des Prozesses
 
-Text in Arbeit
+Der Prozess dreht sich im Kern um den Dokumentenupload und die -prüfung. Es gibt unterschiedliche Stellen die bei Änderungen bearbeitet werden müssen und im nachfolgenden zusammenfassend erläutert werden:
 
-1. E-Mail: Diese können nur im Prozess über den Camunda Modeler bearbeitet werden. Alle sendenen Nachrichten-Aufgaben wurden mit dem [Mail Connector](https://github.com/camunda/camunda-bpm-mail) verbunden und können im „Properties Pannel“ untern dem Reiter "Connector" bearbeitet werden. Alle möglichen Einstellungen können Sie der Dokumentation des [Mail Connector‘s](https://github.com/camunda/camunda-bpm-mail) entnehmen.
-2. DMN Tabelle:
-3. Embedded Web-Formulare:
-4. True / False Dokumente:
-
+* E-Mail: Diese können nur im Prozess über den Camunda Modeler bearbeitet werden. Alle sendenden Nachrichten-Aufgaben wurden mit dem [Mail Connector](https://github.com/camunda/camunda-bpm-mail) verbunden und können im „Properties Pannel“ untern dem Reiter "Connector" bearbeitet werden. Alle möglichen Einstellungen können Sie der Dokumentation des [Mail Connector‘s](https://github.com/camunda/camunda-bpm-mail) entnehmen.
+* DMN Tabelle: Bei der DMN-Tabelle „Dokumente bestimmen“, sind die verschiedenen Output-Parameter in einen Array zwischengespeichert (Camunda Modeler: Map Decision Result = singelResult). Damit die Process Engine die verschiedenen Output-Parameter verarbeiten kann, wurden die einzelnen Werte des Arrays über die JAVA-Klasse „ParseDecisionListener“ entsprechend deklariert und an die Process Engine übergeben. Sollten Sie die DMN-Tabelle ändern, müssen Sie gegeben Falls auch die angegebene JAVA-Klasse anpassen.
+* Dynamische Web-Formulare: Damit die Process Engine weiß, welche Dokumente erwartet werden, wurden für jeden Anwendungsfall ein Webseiten-Formular erstellt (Benutzer-Aufgaben: „Dokumente hochladen“ und „Gebühr bezahlen & Nachweis hochladen“). Die Namen werden – je nach Anwendungsfall – über die DMN-Tabelle „Dokumente bestimmen“, als Variable, abgerufen. Sollten Dokumente dem Prozess hinzugefügt oder entfernt werden, müssen auch die Prozessinternen Webformulare (/src/main/webapp/) sowie die DMN-Tabelle überarbeitet werden.
+* True / False Dokumente: Die True / False Werte der DMN-Tabelle „Dokumente bestimmen“ werden über den beigefügten E-Mail Link an die „externen Webseiten Formulare“ übermittelt, wodurch es möglich ist, Webformulare dynamisch aufzubauen. Sollten Dokumente dem Prozess hinzugefügt oder entfernt werden, muss nicht nur die DMN-Tabelle, sondern auch die URL (Link) sowie die externen Webseiten-Formulare entsprechend überarbeitet werden. 
 
 ## Rest-API ansteuern
 
